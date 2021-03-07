@@ -1,17 +1,7 @@
 import { KnitServer as Knit, Maid, Service, RemoteSignal } from '@rbxts/knit';
 import { Players, ServerStorage, Workspace } from '@rbxts/services';
 
-let RoundService: Service<{
-    Name: string;
-    Client: {
-        RoundInfo: RemoteSignal<(eventName: string, data: number | string | undefined, mostCollectedApples?: number | undefined) => void>;
-    };
-    getWinner(): [Player | undefined, number];
-    startIntermission(): void;
-    startRound(): void;
-    appleCollected(plr: Player, collectedApples: number): void;
-    KnitStart(): void;
-}, unknown>; // there is definitely a better way to do this plz help
+let RoundService: typeof Knit.Services.RoundService;
 
 const applePrefab = ServerStorage.FindFirstChild('Apple') as BasePart;
 const appleHalfHeight = applePrefab.Size.Y * 0.5;
