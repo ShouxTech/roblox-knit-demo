@@ -1,15 +1,6 @@
 import { KnitServer as Knit, RemoteSignal, Service, Maid } from '@rbxts/knit';
 
-let AppleGenerationService: Service<{
-    Name: string;
-    appleCollectors: Map<Player, number>;
-    maid: Maid;
-    Client: {};
-    resetAppleCollectors(): void;
-    startGeneration(): void;
-    stopGenerationAndClearApples(): void;
-    KnitInit(): void;
-}, unknown>; // there is definitely a better way to do this plz help
+let AppleGenerationService: typeof Knit.Services.AppleGenerationService;
 
 const INTERMISSION_TIME = 10;
 const ROUND_TIME = 30;
