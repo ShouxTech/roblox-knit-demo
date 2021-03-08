@@ -1,4 +1,4 @@
-import { KnitServer as Knit, RemoteSignal, Service, Maid } from '@rbxts/knit';
+import { KnitServer as Knit, RemoteSignal } from '@rbxts/knit';
 
 let AppleGenerationService: typeof Knit.Services.AppleGenerationService;
 
