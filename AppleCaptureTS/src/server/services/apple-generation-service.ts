@@ -1,4 +1,4 @@
-import { KnitServer as Knit, Maid, Service, RemoteSignal } from '@rbxts/knit';
+import { KnitServer as Knit, Maid } from '@rbxts/knit';
 import { Players, ServerStorage, Workspace } from '@rbxts/services';
 
 let RoundService: typeof Knit.Services.RoundService;
